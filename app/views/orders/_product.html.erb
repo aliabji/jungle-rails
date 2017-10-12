@@ -11,7 +11,7 @@
   <%= order_product.quantity %>
 </td>
 <td>
-<%= order_product.total_price_cents %>
+<%= Money.new(order_product.total_price_cents, 'USD') %>
 </td>
 
 </tr>

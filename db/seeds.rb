@@ -132,5 +132,30 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+## REVIEWS
+
+Review.destroy_all
+
+Review.create!({
+  product_id: 1,
+  user_id: 1,
+  description: 'GOOD product',
+  rating: 5
+})
+
+Review.create!({
+  product_id: 2,
+  user_id: 1,
+  description: 'Ok product',
+  rating: 3
+})
+
+Review.create!({
+  product_id: 3,
+  user_id: 1,
+  description: 'Bad product',
+  rating: 1
+})
+
 
 puts "DONE!"

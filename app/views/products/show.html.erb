@@ -24,6 +24,13 @@
           <dd><%= @product.price %></dd>
         </dl>
       </div>
+
+      <div>
+      <% @review.each do |review| %>
+        <%= render partial: "products/review", locals: {review: review} %>
+      <% end %>
+
+      </div>
     </div>
 
   </article>

@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
     @order_products = LineItem.where(order_id: @order.id)
-    
+
   end
 
   def create
@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
 
     if order.valid?
       empty_cart!
-      OrderMailer.order_confirmation(session[:user_id]).deliver
+      
       redirect_to order, notice: 'Your Order has been placed.'
     else
       redirect_to cart_path, flash: { error: order.errors.full_messages.first }

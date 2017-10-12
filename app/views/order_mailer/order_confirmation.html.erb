@@ -6,12 +6,16 @@
   <body>
     <h1>Thank you for placing an order with Jungle, <%= @user %></h1>
     <p>
-      Your order has successfully been placed,
-      your email is: <%= @user %>.<br>
+      Your order has successfully been placed!
     </p>
     <p>
-      To login to the site, just follow this link: <%= @url %>.
+       Your order contains:
+       <% @line_items.each do |order_product| %>
+        <%= render partial: "order_mailer/product", locals: {order_product: order_product} %>
+      <% end %>
+
+      Your total is: <%= Money.new(@order.total_cents, 'USD') %>
     </p>
-    <p>Thanks for joining and have a great day!</p>
+    <p>Thanks for shopping with Jungle and have a great day!</p>
   </body>
 </html>

@@ -1,0 +1,4 @@
+<%= order_product.product.name %>
+<p><%= order_product.product.description %></p>
+<%= order_product.quantity %>
+<%= Money.new(order_product.total_price_cents, 'USD') %>

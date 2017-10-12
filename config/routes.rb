@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index, :show] do
     post '/reviews' => 'reviews#create'
-
   end
 
 

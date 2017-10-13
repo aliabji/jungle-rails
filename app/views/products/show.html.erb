@@ -23,10 +23,14 @@
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
           <dt>Reviews</dt>
-          <dd><% @review.each do |review| %>
+          <dd><% @existing_review.each do |review| %>
             <%= render partial: "products/review", locals: {review: review} %>
           <% end %></dd>
         </dl>
+      </div>
+
+      <div>
+            <%= render partial: "products/new_review" %>
       </div>
 
     </div>

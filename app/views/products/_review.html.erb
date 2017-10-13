@@ -1,7 +1,10 @@
 <div>
 Rating: <%= review.rating %> 
 <br>
-Description: <%= review.description %>
 <br>
-Review Author: <%= review.user_id %>
+ <%= review.description %>
+<br>
+<br>
+Review By: <%= review.user.first_name %>
+<hr>
 </div>

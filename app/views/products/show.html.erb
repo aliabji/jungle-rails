@@ -22,17 +22,19 @@
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
-          <dt>Reviews</dt>
-          <dd><% @existing_review.each do |review| %>
-            <%= render partial: "products/review", locals: {review: review} %>
-          <% end %></dd>
         </dl>
       </div>
 
-      <div>
-            <%= render partial: "products/new_review" %>
-      </div>
+    </div>
 
+    <div class="col-sm-5">
+      <%= render partial: "products/new_review" %>
+    </div>
+
+    <div class="col-sm-8" style="padding-top: 1em">
+      <% @existing_review.each do |review| %>
+      <%= render partial: "products/review", locals: {review: review} %>
+      <% end %>
     </div>
 
   </article>

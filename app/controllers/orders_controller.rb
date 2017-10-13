@@ -33,7 +33,7 @@ class OrdersController < ApplicationController
     Stripe::Charge.create(
       source:      params[:stripeToken],
       amount:      cart_total, # in cents
-      description: "#{session[:user_id]} Order",
+      description: "#{current_user.first_name}'s' Order",
       currency:    'cad'
     )
   end

@@ -17,8 +17,13 @@
 <br>
 Review By: <%= review.user.first_name %>
 <br>
-<% if (review.user.id.to_i == current_user.id.to_i) %>
-<h5>Delete button here </h5>
+
+<% if current_user %>
+<% logged_in = current_user.id %>
+<% end %>
+
+<% if (review.user.id.to_i == logged_in) %>
+
 <%= link_to "delete", [@product, @review], :method  => :delete %>
 <% end %>
 <hr>

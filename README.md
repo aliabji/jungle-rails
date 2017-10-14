@@ -13,7 +13,7 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 !["Screenshot of Home Page"](https://github.com/aliabji/jungle-rails/blob/master/docs/Screen%20Shot%202017-10-14%20at%203.35.56%20PM.png?raw=true)
 
-!["Screenshot of "]
+!["Screenshot of Order Page"](https://github.com/aliabji/jungle-rails/blob/master/docs/Screen%20Shot%202017-10-14%20at%203.35.31%20PM.png)
 
 !["Screenshot of "]
 

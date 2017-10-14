@@ -26,8 +26,9 @@
       </div>
 
     </div>
+    <br>
     <% if !current_user %>
-    <h3>Please log in to create a review </h3>
+    <h4>Please log in to create a review </h4>
     <% else %>
     <div class="col-sm-5">
       <%= render partial: "products/new_review" %>

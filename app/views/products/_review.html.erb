@@ -1,5 +1,15 @@
 <div>
-Rating: <%= review.rating %> 
+<% if review.rating > 4 %>
+<i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i>
+<% elsif review.rating > 3 %>
+<i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
+<% elsif review.rating > 2 %>
+<i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star-o fa-2x" aria-hidden="true"></i><i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
+<% elsif review.rating > 1 %>
+<i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star-o fa-2x" aria-hidden="true"></i><i class="fa fa-star-o fa-2x" aria-hidden="true"></i><i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
+<% elsif  review.rating > 0 %>
+<i class="fa fa-star fa-2x" aria-hidden="true"></i><i class="fa fa-star-o fa-2x" aria-hidden="true"></i><i class="fa fa-star-o fa-2x" aria-hidden="true"></i><i class="fa fa-star-o fa-2x" aria-hidden="true"></i><i class="fa fa-star-o fa-2x" aria-hidden="true"></i>
+<% end %>
 <br>
 <br>
  <%= review.description %>

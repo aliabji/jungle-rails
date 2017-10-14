@@ -29,6 +29,9 @@ gem 'bcrypt', '~> 3.1.7'
 # For review star ratings
 gem 'ratyrate'
 
+# Stars
+gem 'font-awesome-rails'
+
 gem 'puma'
 
 gem 'bootstrap-sass', '~> 3.3.6'

@@ -2,7 +2,6 @@ class ReviewsController < ApplicationController
 
   def create
 
-    
     @product = Product.find params[:product_id]
     @review = @product.new_review(review_params, current_user)
     new_review = @review
@@ -14,6 +13,11 @@ class ReviewsController < ApplicationController
       redirect_to product_show
     end
 
+  end
+
+  def delete
+    @product = Product.find params[:product_id]
+    @review = @product.review.
   end
 
   private

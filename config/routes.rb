@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index, :show] do
     post '/reviews' => 'reviews#create'
+    delete '/reviews' => 'reviews#delete'
   end
 
 

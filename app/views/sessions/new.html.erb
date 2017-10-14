@@ -1,12 +1,15 @@
+<div class="container col-sm-5">
+
 <h1>Login</h1>
 
-<%= form_tag '/login' do %>
-  <div class="form-group">
-  Email: <%= text_field_tag :email %>
-  </div>
-  <div class="form-group">
-  Password: <%= password_field_tag :password %>
-  </div>
-  <%= submit_tag "Submit" %>
+  <%= form_tag '/login' do %>
+    <div class="form-group">
+    <div>Email: <%= text_field_tag :email, "", class: 'form-control' %></div>
+    </div>
+    <div class="form-group">
+    <div>Password: <%= password_field_tag :password, "", class: 'form-control' %></div>
+    </div>
+    <%= submit_tag "Submit" %>
 
-<% end %>
+  <% end %>
+</div>

@@ -15,7 +15,7 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 !["Screenshot of Order Page"](https://github.com/aliabji/jungle-rails/blob/master/docs/Screen%20Shot%202017-10-14%20at%203.35.31%20PM.png)
 
-!["Screenshot of "]
+!["Screenshot of Product Page"](https://github.com/aliabji/jungle-rails/blob/master/docs/Screen%20Shot%202017-10-14%20at%203.43.51%20PM.png)
 
 ## Stripe Testing
 

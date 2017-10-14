@@ -1,8 +1,6 @@
-
-<h1>Signup!</h1>
-
-<div class="container col-sm-4">
-  <div class="row justify-content-md-center">
+<div class="container col-sm-5">
+  <h1>Signup</h1>
+  <div>
     <%= form_for :user, url: '/users' do |f| %>
       <div class="form-group">
       First Name: <%= f.text_field :first_name, class: 'form-control' %>

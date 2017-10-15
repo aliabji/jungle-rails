@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
 
-  post '/rate' => 'rater#create', :as => 'rate'
   root to: 'products#index'
 
   resources :products, only: [:index, :show] do
     post '/reviews' => 'reviews#create'
-    delete '/reviews' => 'reviews#delete'
+    delete '/reviews.:id' => 'reviews#delete'
   end
 
 

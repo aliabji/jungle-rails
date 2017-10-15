@@ -16,13 +16,11 @@ class ReviewsController < ApplicationController
   end
 
   def delete
-    @product = Product.find params[:product_id]
-    @review = @product.reviews.find(params[:review_id])
+    @review = Review.find params[:id]
     @review.destroy
-    product_show = @product
+    @product = Product.find params[:product_id]
+    redirect_to product_path(@product), notice: 'Review deleted!'
 
-    redirect_to product_show, notice: 'Your review has been deleted.'
-    
   end
 
 

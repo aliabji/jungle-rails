@@ -36,8 +36,8 @@
     <% end %>
 
     <div class="col-sm-8" style="padding-top: 1em">
-      <% @existing_review.each do |review| %>
-      <%= render partial: "products/review", locals: {review: review} %>
+      <% @existing_review.each do |reviews| %>
+      <%= render partial: "products/reviews", locals: {reviews: reviews} %>
       <% end %>
     </div>
 

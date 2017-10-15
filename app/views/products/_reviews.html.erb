@@ -23,6 +23,8 @@ Review By: <%= reviews.user.first_name %>
 <% current_review = reviews.id %>
 <% end %>
 
+<br>
+
 <% if (reviews.user.id.to_i == logged_in) %>
 
 <%= link_to 'Delete', product_reviews_path(@product, reviews), method: :delete, data: { confirm: 'Sure you want to delete review?' }, class: 'btn btn-danger', role: 'button' %>
